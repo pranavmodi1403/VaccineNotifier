@@ -1,1 +1,1 @@
-# VaccineNotifier
+# Vaccine Notifier
