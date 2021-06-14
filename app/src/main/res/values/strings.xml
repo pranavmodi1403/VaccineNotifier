@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Vaccine Slot Notifier</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="select_state">Select State</string>
+    <string name="select_district">Select District</string>
+    <string name="polling_interval">Polling Interval</string>
+    <string name="enter_valid_pincode">Enter Valid Pincode</string>
+    <string name="start_monitoring">Start\nMonitoring</string>
+    <string name="stop_monitoring">Stop\nMonitoring</string>
+    <string name="enter_pincode">Enter Pincode</string>
+    <string name="last_checked_at">Last Checked At:- </string>
+    <string name="api_base_url">https://www.cowin.gov.in/api/v2/</string>
+    <string name="api_error_general_msg">Something Went Wrong!! Please Try Again</string>
+    <string name="network_unavailable">Internet Connection is not Available</string>
+    <string name="notificationchannelid">dsvacineappchannel</string>
+    <string name="notificationchannelname">dsvaccineappcname</string>
+    <string name="notificationchanneldesc">Shows Slot Availability</string>
+    <string name="moreapp_url">https://ielts.rajodiya.com/IELTS/getmoreappdetails.php</string>
+    <string name="moreapp_authcode">ZGFyc2hpdDpAZG1kQA==</string>
+    <string name="appNotFOund">App Not Found</string>
+    <string name="data_line1">Data is sourced real-time from Co-WIN portal.</string>
+    <string name="data_line2">Please use the Co-WIN app to book vaccination appointments.</string>
+    <string name="admob_banner1">ca-app-pub-2611063439980897/9522067309</string>
+    <string name="admob_banner2">ca-app-pub-2611063439980897/7732195682</string>
+</resources>

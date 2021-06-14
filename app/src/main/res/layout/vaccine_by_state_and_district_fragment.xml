@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+        <com.google.android.gms.ads.AdView
+            xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/district_adView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            ads:adSize="BANNER"
+            ads:adUnitId="@string/admob_banner2" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/fragment_form"
+            android:layout_below="@id/district_adView"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/select_state"
+                android:textSize="16sp"
+                android:layout_marginBottom="15dp"
+                android:textColor="@android:color/black" />
+
+            <Spinner
+                android:id="@+id/select_state_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:spinnerMode="dialog"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/spinner_background" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/select_district"
+                android:textSize="16sp"
+                android:layout_marginBottom="15dp"
+                android:textColor="@android:color/black" />
+
+            <Spinner
+                android:id="@+id/select_district_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:spinnerMode="dialog"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/spinner_background" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/polling_interval"
+                android:textSize="16sp"
+                android:layout_marginBottom="15dp"
+                android:textColor="@android:color/black"/>
+
+            <Spinner
+                android:id="@+id/select_polling_interval_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:spinnerMode="dialog"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/spinner_background" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/checkbox_18"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="18+ Age"
+                    android:textSize="16sp"
+                    android:layout_marginRight="10dp"
+                    android:buttonTint="@color/colorPrimaryDark"
+                    android:checked="true"/>
+
+                <CheckBox
+                    android:id="@+id/checkbox_45"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="45+ Age"
+                    android:textSize="16sp"
+                    android:buttonTint="@color/colorPrimaryDark"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <Button
+                    android:id="@+id/start_monitoring_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/start_monitoring"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="20dp"
+                    android:textColor="@android:color/white"
+                    android:layout_weight="1"
+                    android:layout_marginRight="10dp" />
+
+                <Button
+                    android:id="@+id/stop_monitoring_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/stop_monitoring"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@android:color/white"
+                    android:layout_weight="1"
+                    android:enabled="false"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_last_checked"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/last_checked_at"
+                android:textSize="16sp"
+                android:layout_marginBottom="15dp"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/vaccinedata_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/fragment_form"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/data_line1"
+            android:layout_below="@id/vaccinedata_recyclerview"
+            android:layout_marginTop="15dp"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/colorPrimaryDark"
+            android:id="@+id/data_line1"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/data_line2"
+            android:layout_below="@id/data_line1"
+            android:layout_marginBottom="20dp"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/colorPrimaryDark"
+            android:textAlignment="center"/>
+    </RelativeLayout>
+</ScrollView>
